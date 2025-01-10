@@ -1,0 +1,30 @@
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 20px;
+}
+h1 {
+	color: #333;
+}
+form {
+	margin-bottom: 20px;
+}
+label {
+	display: block;
+	margin: 10px 0;
+}
+#dataList h3 {
+	color: #555;
+	margin-top: 20px;
+}
+#dataList ul {
+	list-style: none;
+	padding: 0;
+}
+#dataList li {
+	background: #f9f9f9;
+	margin: 5px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}

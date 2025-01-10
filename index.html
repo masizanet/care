@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>일일 체크</title>
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+	<h1>일일 건강 기록부</h1>
+	<p>(컵은 종이컵 기준, 190ml)</p>
+	<form id="dataForm">
+		<input type="date" id="dateInput" required />
+		<label>
+			소변 (컵):
+			<input type="number" id="value1" min="0" step="1" value="0" />
+		</label>
+		<label>
+			장루(컵):
+			<input type="number" id="value2" min="0" step="1"  value="0" />
+		</label>
+		<label>
+			물 마시기(컵):
+			<input type="number" id="value3" min="0" step="1"  value="0" />
+		</label>
+		<label>
+			걷기 (5분 단위):
+			<input type="number" id="value4" min="0" max="120" step="5"  value="0" />
+		</label>
+		<button type="submit">저장</button>
+	</form>
+
+	<form id="importForm">
+		<input type="file" id="csvFileInput" accept=".csv" />
+		<button type="submit">CSV 불러오기</button>
+	</form>
+	<button id="exportCSV">CSV 내보내기</button>
+
+	<div id="dataList"></div>
+
+	<script src="app.js"></script>
+</body>
+
+</html>
