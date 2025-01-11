@@ -14,6 +14,10 @@
 	<form id="dataForm">
 		<input type="date" id="dateInput" required />
 		<label>
+			시간 (HH:MM):
+			<input type="time" id="timeInput" required />
+		</label>
+		<label>
 			소변 (컵):
 			<input type="number" id="value1" min="0" step="0.5" value="0" />
 		</label>
@@ -32,15 +36,14 @@
 		<button type="submit">저장</button>
 	</form>
 
+	<div id="dataList"></div>
+
+	<h2 class="subitems">데이터 내보내기, 불러오기</h2>
+	<button id="exportCSV">CSV 내보내기</button>
 	<form id="importForm">
 		<input type="file" id="csvFileInput" accept=".csv" />
 		<button type="submit">CSV 불러오기</button>
 	</form>
-	<button id="exportCSV">CSV 내보내기</button>
-
-	<div id="dataList"></div>
-
 	<script src="app.js"></script>
 </body>
-
 </html>

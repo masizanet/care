@@ -28,3 +28,7 @@ label {
 	border: 1px solid #ddd;
 	border-radius: 5px;
 }
+
+h2.subitems {
+	font-size: 1rem;
+}
