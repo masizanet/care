@@ -430,14 +430,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	fetchData();
 });
 
-document.getElementById("exportCSV").addEventListener("click", exportDataAsCSV);
+// document.getElementById("exportCSV").addEventListener("click", exportDataAsCSV);
 
-document.getElementById("importForm").addEventListener("submit", (event) => {
-	event.preventDefault();
-	const fileInput = document.getElementById("csvFileInput");
-	if (fileInput.files.length > 0) {
-		importDataFromCSV(fileInput.files[0]);
-	} else {
-		alert("CSV 파일을 선택하세요.");
-	}
-});
+// document.getElementById("importForm").addEventListener("submit", (event) => {
+// 	event.preventDefault();
+// 	const fileInput = document.getElementById("csvFileInput");
+// 	if (fileInput.files.length > 0) {
+// 		importDataFromCSV(fileInput.files[0]);
+// 	} else {
+// 		alert("CSV 파일을 선택하세요.");
+// 	}
+// });
