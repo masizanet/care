@@ -1,34 +1,223 @@
+/* 전체 레이아웃 */
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	margin: 20px;
-}
-h1 {
 	color: #333;
+	background-color: #f9f9f9;
 }
-form {
+
+/* 제목 스타일 */
+h1, h3 {
+	color: #333;
+	text-align: center;
 	margin-bottom: 20px;
 }
-label {
-	display: block;
-	margin: 10px 0;
+
+/* 입력 양식 스타일 */
+form {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+	max-width: 600px; /* 양식의 최대 너비 */
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* 두 개의 열로 나누기 */
+	grid-gap: 15px; /* 필드 간 간격 */
+	align-items: center;
 }
-#dataList h3 {
+
+form label {
+	font-weight: bold;
 	color: #555;
+}
+
+form input {
+	width: 90%;
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+form input:focus {
+	border-color: #007bff;
+	outline: none;
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+	grid-column: span 2; /* 버튼이 두 열을 차지하도록 설정 */
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+form button:hover {
+	background-color: #0056b3;
+}
+
+
+/* 달력 스타일 */
+#calendar {
+	max-width: 320px;
+	margin: 20px auto;
+}
+
+#calendarTable {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#calendarTable th, #calendarTable td {
+	width: 14.28%;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+#calendarTable th {
+	background-color: #f7f7f7;
+	font-weight: bold;
+}
+
+.date-cell {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.date-cell:hover {
+	background-color: #f0f0f0;
+}
+
+.date-cell.selected {
+	background-color: #d1e7ff;
+	font-weight: bold;
+}
+
+/* 출력부 스타일 */
+#dataTable {
+	width: 100%;
+	border-collapse: collapse;
 	margin-top: 20px;
 }
+
+#dataTable th, #dataTable td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+#dataTable th {
+	background-color: #f7f7f7;
+	font-weight: bold;
+}
+
+#dataTable td {
+	background-color: #fff;
+}
+
+#dataList {
+	margin-top: 20px;
+}
+
 #dataList ul {
 	list-style: none;
 	padding: 0;
 }
+
 #dataList li {
-	background: #f9f9f9;
+	background: #fff;
 	margin: 5px 0;
 	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2.subitems {
-	font-size: 1rem;
+/* 합계 표시 스타일 */
+#summary {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 20px auto;
+	max-width: 400px;
+	text-align: center;
+}
+
+#summary h3 {
+	margin-bottom: 10px;
+	color: #333;
+}
+
+
+#todaySummary {
+	background: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	margin: 20px auto;
+	max-width: 600px;
+	text-align: center;
+	cursor: pointer; /* 클릭 가능 강조 */
+}
+
+#todaySummary h2 {
+	margin: 0;
+	color: #333;
+}
+
+#calendarContainer {
+	margin-top: 20px;
+	display: none; /* 기본적으로 감춤 */
+}
+
+#calendarTable {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+#calendarTable th, #calendarTable td {
+	width: 14.28%;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+#calendarTable th {
+	background-color: #f7f7f7;
+	font-weight: bold;
+}
+
+.date-cell {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.date-cell:hover {
+	background-color: #f0f0f0;
+}
+
+.date-cell.selected {
+	background-color: #d1e7ff;
+	font-weight: bold;
+}
+
+
+.highlight {
+	background-color: #d1e7ff;
+	transition: background-color 0.5s ease;
 }
